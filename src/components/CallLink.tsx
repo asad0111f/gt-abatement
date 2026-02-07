@@ -18,7 +18,12 @@ export function CallLink({
     <a
       href={`tel:${phone}`}
       className={cn(className)}
-      onClick={() => trackEvent("lead_call_click", { location })}
+      onClick={() =>
+        trackEvent(
+          "lead_call_click",
+          location ? { location } : undefined
+        )
+      }
       data-track="phone-click"
     >
       {children}
