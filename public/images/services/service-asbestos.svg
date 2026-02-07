@@ -1,0 +1,13 @@
+<svg width="1200" height="800" viewBox="0 0 1200 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="800" fill="#0E141A"/>
+  <rect x="80" y="80" width="1040" height="640" rx="40" fill="url(#grad)"/>
+  <text x="600" y="420" fill="#D8B36A" font-size="40" font-family="Arial, sans-serif" text-anchor="middle" letter-spacing="3">
+    ASBESTOS
+  </text>
+  <defs>
+    <linearGradient id="grad" x1="80" y1="80" x2="1120" y2="720" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#141B24"/>
+      <stop offset="1" stop-color="#24303B"/>
+    </linearGradient>
+  </defs>
+</svg>

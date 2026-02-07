@@ -16,6 +16,35 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
+## Lead Form (Production Setup)
+
+The site uses a single lead form that posts to `POST /api/lead`.
+
+### What happens on submit
+- Server-side validation (name, email, phone, subject, message)
+- Submission stored in `data/leads.jsonl`
+- Notification email sent to the business email
+- Optional auto-reply to the customer
+- Rate limit per IP + honeypot spam trap
+
+### Required environment variables
+```
+SMTP_HOST=
+SMTP_PORT=587
+SMTP_USER=
+SMTP_PASS=
+MAIL_FROM=info@gtabate.ca
+MAIL_TO=info@gtabate.ca
+MAIL_AUTOREPLY_ENABLED=false
+```
+
+### Local testing
+1. Add the variables to a `.env.local` file.
+2. Run `npm run dev`.
+3. Submit the form on Home, Services, or Contact pages.
+
+Check `data/leads.jsonl` for stored submissions.
+
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
